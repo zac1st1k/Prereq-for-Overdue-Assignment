@@ -36,4 +36,17 @@
     return YES;
 }
 
+- (IBAction)processDateButtonPressed:(id)sender {
+    NSDate *date = self.datePicker.date;
+    NSDateFormatter *formater = [[NSDateFormatter alloc] init];
+//    [formater setDateFormat:@"dd/LLL/yy"];
+    [formater setDateFormat:@"yyyy-MM-dd"];
+    NSString *stringFromDate = [formater stringFromDate:date];
+    self.textView.text = stringFromDate;
+    NSLog(@"%@", stringFromDate);
+    NSLog(@"%@", [NSDate date]);
+    int timeInterval = [date timeIntervalSince1970];
+    NSLog(@"%i", timeInterval);
+}
+
 @end

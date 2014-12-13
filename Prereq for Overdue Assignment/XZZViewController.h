@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XZZViewController : UIViewController
+@interface XZZViewController : UIViewController <UITextViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end

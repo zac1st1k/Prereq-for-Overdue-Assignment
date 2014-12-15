@@ -19,6 +19,11 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.textView.delegate = self;
+    NSMutableArray *myMutableArray = [@[@1, @"hello", @3, @"goodbay"] mutableCopy];
+    [myMutableArray insertObject:@"This should be first" atIndex:0];
+    NSLog(@"%@", myMutableArray);
+    [myMutableArray removeObjectAtIndex:2];
+    NSLog(@"%@", myMutableArray);
 }
 
 - (void)didReceiveMemoryWarning
